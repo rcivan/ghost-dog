@@ -7,15 +7,24 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p147k"]
 texture = ExtResource("1_6wmmg")
+texture_region_size = Vector2i(256, 256)
+use_texture_padding = false
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3sm8s"]
 texture = ExtResource("2_12op4")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7i7u7"]
 texture = ExtResource("3_1xhre")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd1h4"]
 texture = ExtResource("4_l1twx")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7jb5s"]
 sources/0 = SubResource("TileSetAtlasSource_p147k")
@@ -26,6 +35,5 @@ sources/3 = SubResource("TileSetAtlasSource_rd1h4")
 [node name="Map" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(55, 53)
 tile_set = SubResource("TileSet_7jb5s")
 format = 2
