@@ -1,2 +1,2 @@
 # ghost-dog
-The fun ghost dog
+The ghost dog
