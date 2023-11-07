@@ -1,2 +1,2 @@
 # Ghost Dog
-This is awesome 
+![screenshot](screenshot.png)
