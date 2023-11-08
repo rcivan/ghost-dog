@@ -1,0 +1,34 @@
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://rwwrdltypxbh"]
+
+[ext_resource type="Texture2D" uid="uid://cto2eheg7b8d6" path="res://assets/prelim/tiles/background.png" id="1_5fxld"]
+[ext_resource type="Texture2D" uid="uid://bbsjx53fxrpjv" path="res://assets/prelim/tiles/brick.png" id="2_d8mda"]
+[ext_resource type="Texture2D" uid="uid://j620ohf15ynx" path="res://assets/prelim/tiles/button.png" id="3_2k3cx"]
+[ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="4_o3sy8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p147k"]
+texture = ExtResource("1_5fxld")
+0:0/size_in_atlas = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3sm8s"]
+texture = ExtResource("2_d8mda")
+0:0/size_in_atlas = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7i7u7"]
+texture = ExtResource("3_2k3cx")
+0:0/size_in_atlas = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd1h4"]
+texture = ExtResource("4_o3sy8")
+texture_region_size = Vector2i(1, 1)
+0:0/size_in_atlas = Vector2i(18, 18)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(280, 280)
+sources/0 = SubResource("TileSetAtlasSource_p147k")
+sources/1 = SubResource("TileSetAtlasSource_3sm8s")
+sources/2 = SubResource("TileSetAtlasSource_7i7u7")
+sources/3 = SubResource("TileSetAtlasSource_rd1h4")
