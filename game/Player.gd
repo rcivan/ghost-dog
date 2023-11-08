@@ -1,56 +1,31 @@
 extends CharacterBody2D
 
 
-const SPEED_CUTOFF = 400.0
-const JUMP_VELOCITY = -800.0
-
+const SPEED = 400.0
+const JUMP_VELOCITY = -700.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var is_air_sliding = false
-var cancel_cooldown = false
+
 
 func _physics_process(delta):
-	
-	var direction = Input.get_axis("left", "right")
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
-	
+
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY 
-		
-	#Handle Slide Jump
-	if Input.is_action_just_pressed("jump") and is_air_sliding and not cancel_cooldown:
-		velocity.y += -400 
-		velocity.x += 100 * direction
-		is_air_sliding = false
-		cancel_cooldown = true
-		
-	# toggles slide and jump when grounded
-	if is_on_floor() and cancel_cooldown:
-		cancel_cooldown = false
-	if is_air_sliding and is_on_floor():
-		is_air_sliding = false
-		
+		velocity.y = JUMP_VELOCITY
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	
-	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF:
-		velocity.x += 50 * direction
-	elif not direction:
-		velocity.x = move_toward(velocity.x, 0, 15)
-	
-	#Handles Slide
-	if Input.is_action_just_pressed("slide"):
-		velocity.x = 800 * direction
-		if not is_on_floor():
-			is_air_sliding = true
+	var direction = Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	
+
 
 	if velocity.x != 0:
 		$AnimatedSprite2D.flip_h = velocity.x > 0
