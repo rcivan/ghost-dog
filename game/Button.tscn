@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b36nbeg11obnd"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_n3jea"]
+[ext_resource type="Texture2D" uid="uid://j620ohf15ynx" path="res://assets/prelim/tiles/button.png" id="2_dfr7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5522y"]
+size = Vector2(277, 280)
+
+[node name="Button" type="Area2D"]
+script = ExtResource("1_n3jea")
+
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("2_dfr7m")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(150.5, 149)
+shape = SubResource("RectangleShape2D_5522y")
