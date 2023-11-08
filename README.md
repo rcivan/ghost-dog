@@ -1,2 +1,2 @@
-# ghost-dog
-The ghost dog
+# Ghost Dog
+![screenshot](screenshot.png)
