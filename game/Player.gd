@@ -60,4 +60,13 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play('idle')
 
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		
+		var collision_collider = collision.get_collider()
+		if collision_collider is RigidBody2D:
+			var push_direction = -collision.get_normal()
+			collision_collider.apply_central_impulse(push_direction * 300)
+
+
 	move_and_slide()
