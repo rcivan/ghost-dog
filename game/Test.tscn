@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://Player.tscn" id="1_l12vt"]
 [ext_resource type="Texture2D" uid="uid://y8iaf7dkde7c" path="res://assets/prelim/tiles/spritesheet.png" id="1_yii55"]
-[ext_resource type="PackedScene" uid="uid://b36nbeg11obnd" path="res://Button.tscn" id="2_pudh7"]
+[ext_resource type="PackedScene" path="res://Button.tscn" id="2_pudh7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xsuqu"]
 font_size = 35

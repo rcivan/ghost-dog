@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED_CUTOFF = 400.0
+const SPEED_CUTOFF = 600.0
 const JUMP_VELOCITY = -800.0
 
 
@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -800.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_air_sliding = false
 var cancel_cooldown = false
+var is_sliding =  false
 
 func _physics_process(delta):
 	
@@ -41,17 +42,23 @@ func _physics_process(delta):
 	
 	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF:
 		velocity.x += 40 * direction
-	elif not direction and not is_air_sliding:
+	elif not direction and not is_air_sliding and not is_sliding:
 		velocity.x = move_toward(velocity.x, 0, 200)
-	elif is_air_sliding:
+	elif is_air_sliding or cancel_cooldown:
 		velocity.x = move_toward(velocity.x,0,1)
+	elif is_sliding:
+		velocity.x = move_toward(velocity.x,0,5) 
 	
 	#Handles Slide
-	if Input.is_action_just_pressed("slide"):
-		velocity.x = 800 * direction
+	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding:
+		velocity.x = 1200 * direction
 		if not is_on_floor():
 			is_air_sliding = true
-
+		elif is_on_floor():
+			is_sliding = true
+	
+	if velocity.x <= 400 and velocity.x >= -400 and is_sliding or Input.is_action_just_pressed("jump") :
+		is_sliding = false
 	
 
 	if velocity.x != 0:
