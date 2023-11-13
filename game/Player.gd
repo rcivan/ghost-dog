@@ -40,9 +40,11 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF:
-		velocity.x += 50 * direction
-	elif not direction:
-		velocity.x = move_toward(velocity.x, 0, 15)
+		velocity.x += 40 * direction
+	elif not direction and not is_air_sliding:
+		velocity.x = move_toward(velocity.x, 0, 200)
+	elif is_air_sliding:
+		velocity.x = move_toward(velocity.x,0,1)
 	
 	#Handles Slide
 	if Input.is_action_just_pressed("slide"):
@@ -57,5 +59,14 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play('walk')
 	else:
 		$AnimatedSprite2D.play('idle')
+
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		
+		var collision_collider = collision.get_collider()
+		if collision_collider is RigidBody2D:
+			var push_direction = -collision.get_normal()
+			collision_collider.apply_central_impulse(push_direction * 300)
+
 
 	move_and_slide()
