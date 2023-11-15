@@ -54,7 +54,7 @@ func _physics_process(delta):
 		velocity.x = 1200 * direction
 		if not is_on_floor():
 			is_air_sliding = true
-			velocity.x += velocity.y
+			velocity.x += velocity.y * -direction
 		elif is_on_floor():
 			is_sliding = true
 	if Input.is_action_pressed("slide") and is_sliding:
@@ -75,6 +75,8 @@ func _physics_process(delta):
 		
 		var collision_collider = collision.get_collider()
 		if collision_collider is RigidBody2D:
+			#The rat flings when colliding with a moving/rolling box
+			#Prevent the roll or prevent the fling?
 			var push_direction = -collision.get_normal()
 			collision_collider.apply_central_impulse(push_direction * 300)
 
