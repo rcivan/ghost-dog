@@ -40,7 +40,7 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF:
+	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF and not is_sliding:
 		velocity.x += 40 * direction
 	elif not direction and not is_air_sliding and not is_sliding:
 		velocity.x = move_toward(velocity.x, 0, 200)
@@ -54,8 +54,11 @@ func _physics_process(delta):
 		velocity.x = 1200 * direction
 		if not is_on_floor():
 			is_air_sliding = true
+			velocity.x += velocity.y
 		elif is_on_floor():
 			is_sliding = true
+	if Input.is_action_pressed("slide") and is_sliding:
+		is_sliding = false
 	
 	if velocity.x <= 400 and velocity.x >= -400 and is_sliding or Input.is_action_just_pressed("jump") :
 		is_sliding = false
