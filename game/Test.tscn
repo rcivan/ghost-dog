@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://Player.tscn" id="1_l12vt"]
 [ext_resource type="Texture2D" uid="uid://y8iaf7dkde7c" path="res://assets/prelim/tiles/spritesheet.png" id="1_yii55"]
-[ext_resource type="PackedScene" path="res://Button.tscn" id="2_pudh7"]
+[ext_resource type="PackedScene" uid="uid://b36nbeg11obnd" path="res://Button.tscn" id="2_pudh7"]
 [ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="4_vim14"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xsuqu"]
@@ -161,8 +161,8 @@ sources/1 = SubResource("TileSetAtlasSource_r6boi")
 sources/0 = SubResource("TileSetScenesCollectionSource_13gbt")
 pattern_0 = SubResource("TileMapPattern_y2lqt")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ism7"]
-size = Vector2(62.5, 59)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tu8c"]
+size = Vector2(65, 65)
 
 [node name="Test" type="Node2D"]
 position = Vector2(8, 0)
@@ -203,4 +203,4 @@ texture = ExtResource("4_vim14")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
 position = Vector2(541, 518)
-shape = SubResource("RectangleShape2D_7ism7")
+shape = SubResource("RectangleShape2D_8tu8c")
