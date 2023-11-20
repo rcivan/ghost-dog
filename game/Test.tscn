@@ -161,8 +161,14 @@ sources/1 = SubResource("TileSetAtlasSource_r6boi")
 sources/0 = SubResource("TileSetScenesCollectionSource_13gbt")
 pattern_0 = SubResource("TileMapPattern_y2lqt")
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tu8c"]
 size = Vector2(65, 65)
+=======
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxx64"]
+radius = 32.0
+height = 66.0
+>>>>>>> Stashed changes
 
 [node name="Test" type="Node2D"]
 position = Vector2(8, 0)
@@ -195,6 +201,8 @@ layer_0/tile_data = PackedInt32Array(720896, 1, 0, 786432, 1, 1, 720897, 65537, 
 
 [node name="Box" type="RigidBody2D" parent="."]
 position = Vector2(2.08165e-12, -3)
+contact_monitor = true
+lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Box"]
 position = Vector2(541, 518)
@@ -203,4 +211,8 @@ texture = ExtResource("4_vim14")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
 position = Vector2(541, 518)
+<<<<<<< Updated upstream
 shape = SubResource("RectangleShape2D_8tu8c")
+=======
+shape = SubResource("CapsuleShape2D_xxx64")
+>>>>>>> Stashed changes
