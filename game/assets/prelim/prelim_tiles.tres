@@ -1,13 +1,9 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cokllca8dc6h3"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://cokllca8dc6h3"]
 
-[ext_resource type="PackedScene" uid="uid://b36nbeg11obnd" path="res://Button.tscn" id="1_em2xo"]
 [ext_resource type="Texture2D" uid="uid://y8iaf7dkde7c" path="res://assets/prelim/tiles/spritesheet.png" id="2_rluwx"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_y2lqt"]
 tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 1, 65537, 0, 65537, 65537, 1)
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_13gbt"]
-scenes/1/scene = ExtResource("1_em2xo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r6boi"]
 texture = ExtResource("2_rluwx")
@@ -65,5 +61,4 @@ texture_region_size = Vector2i(50, 50)
 tile_size = Vector2i(50, 50)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_r6boi")
-sources/0 = SubResource("TileSetScenesCollectionSource_13gbt")
 pattern_0 = SubResource("TileMapPattern_y2lqt")
