@@ -90,8 +90,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dtfx"]
-size = Vector2(69, 179)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6oyc"]
+size = Vector2(95, 185)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vd3qh")
@@ -104,5 +104,5 @@ animation = &"idle"
 speed_scale = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(227, 193.5)
-shape = SubResource("RectangleShape2D_1dtfx")
+position = Vector2(220.5, 195.5)
+shape = SubResource("RectangleShape2D_h6oyc")

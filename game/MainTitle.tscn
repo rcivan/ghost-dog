@@ -27,7 +27,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "tjhe ghost fog"
+text = "the ghost fog"
 label_settings = SubResource("LabelSettings_xx2be")
 horizontal_alignment = 1
 
