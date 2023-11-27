@@ -1,2 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
+game/.DS_Store
+game/assets/.DS_Store
+game/assets/final/.DS_Store
+game/assets/prelim/.DS_Store
+game/assets/prelim/tiles/.DS_Store
