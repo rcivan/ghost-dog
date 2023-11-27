@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6bhamrr8vsmj"]
+
+[ext_resource type="PackedScene" uid="uid://b36nbeg11obnd" path="res://Button.tscn" id="1_t8n3y"]
+[ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/prelim_tiles.tres" id="2_pmrgn"]
+[ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://Player.tscn" id="3_q5gj0"]
+
+[node name="TestButtonScene" type="Node2D"]
+
+[node name="Button" parent="." instance=ExtResource("1_t8n3y")]
+position = Vector2(108, 303)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_pmrgn")
+format = 2
+layer_0/tile_data = PackedInt32Array(458752, 1, 0, 524288, 1, 1, 458753, 65537, 0, 524289, 65537, 1, 458754, 1, 0, 524290, 1, 1, 458755, 65537, 0, 524291, 65537, 1, 458756, 1, 0, 524292, 1, 1, 458757, 65537, 0, 524293, 65537, 1, 458758, 1, 0, 524294, 1, 1, 458759, 65537, 0, 524295, 65537, 1, 458760, 1, 0, 524296, 1, 1, 458761, 65537, 0, 524297, 65537, 1, 458762, 1, 0, 524298, 1, 1, 458763, 65537, 0, 524299, 65537, 1, 458764, 1, 0, 524300, 1, 1, 458765, 65537, 0, 524301, 65537, 1, 458766, 1, 0, 524302, 1, 1, 458767, 65537, 0, 524303, 65537, 1, 458768, 1, 0, 524304, 1, 1, 458769, 65537, 0, 524305, 65537, 1, 458770, 1, 0, 524306, 1, 1, 458771, 65537, 0, 524307, 65537, 1, 458772, 1, 0, 524308, 1, 1, 458773, 65537, 0, 524309, 65537, 1, 458774, 1, 0, 524310, 1, 1, 458775, 65537, 0, 524311, 65537, 1)
+
+[node name="Player" parent="." instance=ExtResource("3_q5gj0")]
+position = Vector2(245, 67)
