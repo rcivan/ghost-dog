@@ -81,4 +81,26 @@ func _physics_process(delta):
 			collision_collider.apply_central_impulse(push_direction * 300)
 
 
+	
 	move_and_slide()
+
+
+
+
+func check_button():
+	var map = get_node("/root/Test/Map")
+	var tile = map.local_to_map(self.position)
+	tile.y += 1
+
+	for i in range(3):
+		for j in range(5):
+			var tile_data = map.get_cell_tile_data(0,Vector2(tile.x+i-1,tile.y+j-2))
+			if tile_data != null:
+				if tile_data.get_custom_data("button"):
+					return(true)
+	return(false)
+
+	
+
+
+
