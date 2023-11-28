@@ -87,16 +87,16 @@ func _physics_process(delta):
 
 
 
-
-	
-
+#checks against all unpressed buttons and returns them based on your distance to them
 func check_buttons():
+	#the distance from which you press buttons needs some fine tunning
+	var press_distance = 1.5
 	var tmap = get_node("/root/Test/Map")
 	var tile = tmap.local_to_map(self.position)
 	tile = Vector2(tile.x,tile.y+1)
 	var buttons =  tmap.get_used_cells_by_id(0,0,Vector2(0,0)) + tmap.get_used_cells_by_id(0,0,Vector2(1,0))
 	var press = buttons.filter(func(point):
-		if tile.distance_to(point) < 1.5:
+		if tile.distance_to(point) < press_distance:
 			return true)
 	return(press)
 	
