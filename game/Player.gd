@@ -81,26 +81,26 @@ func _physics_process(delta):
 			collision_collider.apply_central_impulse(push_direction * 300)
 
 
-	
+	print(check_buttons())
 	move_and_slide()
 
 
 
 
-func check_button():
-	var map = get_node("/root/Test/Map")
-	var tile = map.local_to_map(self.position)
-	tile.y += 1
-
-	for i in range(3):
-		for j in range(5):
-			var tile_data = map.get_cell_tile_data(0,Vector2(tile.x+i-1,tile.y+j-2))
-			if tile_data != null:
-				if tile_data.get_custom_data("button"):
-					return(true)
-	return(false)
 
 	
 
+func check_buttons():
+	var tmap = get_node("/root/Test/Map")
+	var tile = tmap.local_to_map(self.position)
+	tile = Vector2(tile.x,tile.y+1)
+	var buttons =  tmap.get_used_cells_by_id(0,0,Vector2(0,0)) + tmap.get_used_cells_by_id(0,0,Vector2(1,0))
+	var press = buttons.filter(func(point):
+		if tile.distance_to(point) < 1.5:
+			return true)
+	return(press)
+	
 
+
+	
 
