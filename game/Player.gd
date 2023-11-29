@@ -81,13 +81,19 @@ func _physics_process(delta):
 			collision_collider.apply_central_impulse(push_direction * 300)
 
 
-	print(check_buttons())
+
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().name == "Map":
+			var buttons = check_buttons()
+			#make sure there is buttons to use
 
 
 
 
-#checks against all unpressed buttons and returns them based on your distance to them
+
+#checks against all unpressed buttons and returns them based on your distance to thema
 func check_buttons():
 	#the distance from which you press buttons needs some fine tunning
 	var press_distance = 1.5
