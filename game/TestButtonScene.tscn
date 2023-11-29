@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6bhamrr8vsmj"]
 
-[ext_resource type="PackedScene" uid="uid://b36nbeg11obnd" path="res://Button.tscn" id="1_t8n3y"]
+[ext_resource type="PackedScene" uid="uid://dkwrathnvna2f" path="res://Button.tscn" id="1_ht8ex"]
 [ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/prelim_tiles.tres" id="2_pmrgn"]
 [ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://Player.tscn" id="3_q5gj0"]
 
-[node name="TestButtonScene" type="Node2D"]
+[node name="Button" type="Node2D"]
 
-[node name="Button" parent="." instance=ExtResource("1_t8n3y")]
-position = Vector2(108, 303)
+[node name="StaticBody2D" parent="." instance=ExtResource("1_ht8ex")]
+position = Vector2(31, 249)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_pmrgn")
