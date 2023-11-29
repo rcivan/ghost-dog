@@ -69,7 +69,9 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play('walk')
 	else:
 		$AnimatedSprite2D.play('idle')
-
+		
+	move_and_slide()
+	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		
@@ -81,14 +83,11 @@ func _physics_process(delta):
 			collision_collider.apply_central_impulse(push_direction * 300)
 
 
+	
 
-	move_and_slide()
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision.get_collider().name == "Map":
-			var buttons = check_buttons()
-			#make sure there is buttons to use
 
+
+	
 
 
 
