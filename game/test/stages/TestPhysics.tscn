@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://37fgt2111hpf"]
 
-[ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://elements/player/Player.tscn" id="1_iu2ok"]
-[ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/tiles/prelim_tiles.tres" id="2_7n65t"]
-[ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="3_1858q"]
+[ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://elements/player/Player.tscn" id="1_le1tx"]
+[ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/tiles/prelim_tiles.tres" id="2_hv3n7"]
+[ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="3_37qy0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xsuqu"]
 font_size = 35
@@ -23,7 +23,7 @@ label_settings = SubResource("LabelSettings_xsuqu")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player" parent="." instance=ExtResource("1_iu2ok")]
+[node name="Player" parent="." instance=ExtResource("1_le1tx")]
 position = Vector2(270, 298)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -34,7 +34,7 @@ limit_top = 0
 
 [node name="Map" type="TileMap" parent="."]
 position = Vector2(-6, -2.08165e-12)
-tile_set = ExtResource("2_7n65t")
+tile_set = ExtResource("2_hv3n7")
 format = 2
 layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(720897, 1, 0, 655361, 1, 0, 589825, 1, 0, 524289, 1, 0, 786433, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851989, 1, 0, 851990, 1, 0, 851991, 1, 0, 851988, 1, 0, 851987, 1, 0, 851986, 1, 0, 851992, 1, 0, 851993, 1, 0, 851994, 1, 0, 851995, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 1, 0, 851999, 1, 0, 852000, 1, 0, 852001, 65537, 0, 852002, 1, 0, 852003, 1, 0, 852004, 1, 0, 852005, 1, 0, 852006, 1, 0, 852007, 1, 0, 852008, 1, 0, 852009, 1, 0, 852010, 1, 0, 852011, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 852015, 1, 0, 852016, 1, 0, 852017, 1, 0, 852018, 1, 0, 852019, 1, 0, 852020, 1, 0, 852021, 1, 0, 852022, 1, 0, 852023, 1, 0, 852024, 1, 0, 852025, 1, 0, 852026, 1, 0, 852027, 1, 0, 852028, 1, 0, 852029, 1, 0)
@@ -44,7 +44,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(720903, 0, 0, 786439, 0, 1, 720904, 65536, 0, 786440, 65536, 1, 720909, 0, 0, 786445, 0, 1, 720910, 65536, 0, 786446, 65536, 1, 720916, 0, 0, 786452, 0, 1, 720917, 65536, 0, 786453, 65536, 1, 720921, 0, 0, 786457, 0, 1, 720922, 65536, 0, 786458, 65536, 1)
+layer_1/tile_data = PackedInt32Array()
 
 [node name="Box" type="RigidBody2D" parent="."]
 position = Vector2(1200, 400)
@@ -53,7 +53,7 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Box"]
 position = Vector2(0.00012207, 3.05176e-05)
 scale = Vector2(0.216667, 0.216667)
-texture = ExtResource("3_1858q")
+texture = ExtResource("3_37qy0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
 shape = SubResource("RectangleShape2D_7ism7")
