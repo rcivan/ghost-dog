@@ -4,7 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var dir = DirAccess.open("res://test/stages")
-	var scenes_container = $VBoxContainer/ScrollContainer/Scenes
+	var scenes_container = $VBoxContainer/Scenes
 	if not dir:
 		return
 	
@@ -17,6 +17,8 @@ func _ready():
 			go_button.pressed.connect(
 				func(): return get_tree().change_scene_to_file("res://test/stages/" + file_name)
 			)
+			go_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			go_button.anchors_preset = go_button.PRESET_VCENTER_WIDE
 			
 			scenes_container.add_child(go_button)
 			
