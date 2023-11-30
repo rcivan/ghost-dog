@@ -83,15 +83,6 @@ func _physics_process(delta):
 			collision_collider.apply_central_impulse(push_direction * 300)
 
 
-	
-
-
-
-	
-
-
-
-
 #checks against all unpressed buttons and returns them based on your distance to thema
 func check_buttons():
 	#the distance from which you press buttons needs some fine tunning
