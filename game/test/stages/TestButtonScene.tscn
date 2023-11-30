@@ -7,7 +7,7 @@
 [node name="Button" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(31, 249)
+position = Vector2(527, 253)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_pmrgn")
@@ -16,3 +16,9 @@ layer_0/tile_data = PackedInt32Array(458752, 1, 0, 524288, 1, 1, 458753, 65537, 
 
 [node name="Player" parent="." instance=ExtResource("3_q5gj0")]
 position = Vector2(245, 67)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(2.08165e-12, -150)
+offset = Vector2(50, 2.08165e-12)
+limit_left = 0
+limit_top = 0
