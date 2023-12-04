@@ -27,14 +27,15 @@ animations = [{
 size = Vector2(40, 30)
 
 [node name="StaticBody2D" type="StaticBody2D"]
-position = Vector2(25, 25)
+position = Vector2(2.08165e-12, 25)
+scale = Vector2(0.998953, 1)
 script = ExtResource("1_3w5ju")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(50, 0, 20, -33, -20, -33, -50, -1)
+position = Vector2(-2.08383e-12, 3)
+polygon = PackedVector2Array(50, -2.5, 40.0419, -33, -40.0419, -33, -50, -2.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(-50, -100)
 scale = Vector2(1, 1.00116)
 sprite_frames = SubResource("SpriteFrames_1j6gh")
@@ -43,7 +44,7 @@ centered = false
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -51)
+position = Vector2(0, -46)
 shape = SubResource("RectangleShape2D_4lpm2")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
