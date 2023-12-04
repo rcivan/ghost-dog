@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b847ipen7ciqk" path="res://assets/prelim/button/pressed.png" id="3_qgn0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ptf3a"]
-size = Vector2(69, 31)
+size = Vector2(80, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1j6gh"]
 animations = [{
@@ -27,23 +27,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lpm2"]
-size = Vector2(45, 27)
+size = Vector2(40, 30)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(0, 25)
 script = ExtResource("1_3w5ju")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(51.5, 83.5)
+position = Vector2(0, -15)
 shape = SubResource("RectangleShape2D_ptf3a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-50, -100)
 sprite_frames = SubResource("SpriteFrames_1j6gh")
 centered = false
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(54.5, 53.5)
+position = Vector2(0, -47)
 shape = SubResource("RectangleShape2D_4lpm2")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
