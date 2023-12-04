@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkwrathnvna2f"]
+[gd_scene load_steps=6 format=3 uid="uid://dkwrathnvna2f"]
 
 [ext_resource type="Script" path="res://elements/stage/Button.gd" id="1_3w5ju"]
 [ext_resource type="Texture2D" uid="uid://bhew6cq8hq3cb" path="res://assets/prelim/button/unpressed.png" id="2_4s6ki"]
 [ext_resource type="Texture2D" uid="uid://b847ipen7ciqk" path="res://assets/prelim/button/pressed.png" id="3_qgn0p"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptf3a"]
-size = Vector2(80, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1j6gh"]
 animations = [{
@@ -32,21 +29,21 @@ size = Vector2(40, 30)
 [node name="StaticBody2D" type="StaticBody2D"]
 position = Vector2(0, 25)
 script = ExtResource("1_3w5ju")
-metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15)
-shape = SubResource("RectangleShape2D_ptf3a")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(53, 0, 20, -33, -20, -33, -54, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-50, -100)
+scale = Vector2(1, 1.00116)
 sprite_frames = SubResource("SpriteFrames_1j6gh")
 centered = false
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -47)
+position = Vector2(0, -51)
 shape = SubResource("RectangleShape2D_4lpm2")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
