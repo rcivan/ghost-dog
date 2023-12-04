@@ -26,7 +26,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lpm2"]
 size = Vector2(40, 30)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Button" type="StaticBody2D"]
 position = Vector2(50, 50)
 script = ExtResource("1_3w5ju")
 metadata/_edit_group_ = true
