@@ -15,11 +15,11 @@ scale = Vector2(0.27, 1.38333)
 texture = ExtResource("2_6bl7j")
 centered = false
 
-[node name="RigidBody2D" type="RigidBody2D" parent="DoorSprite"]
-position = Vector2(-7.70981e-12, 1.10304e-05)
-scale = Vector2(1, 1)
+[node name="StaticBody2D" type="StaticBody2D" parent="DoorSprite"]
+position = Vector2(-7.70981e-12, -1.50481e-12)
+scale = Vector2(3.7037, 0.722892)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/RigidBody2D"]
-position = Vector2(140.741, 140.964)
-scale = Vector2(1, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/StaticBody2D"]
+position = Vector2(38, 195)
+scale = Vector2(0.27, 1.38333)
 shape = SubResource("RectangleShape2D_tn1a7")
