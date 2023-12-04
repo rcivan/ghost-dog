@@ -27,13 +27,13 @@ animations = [{
 size = Vector2(40, 30)
 
 [node name="StaticBody2D" type="StaticBody2D"]
-position = Vector2(2.08165e-12, 25)
-scale = Vector2(0.998953, 1)
+position = Vector2(50, 50)
 script = ExtResource("1_3w5ju")
+metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-2.08383e-12, 3)
-polygon = PackedVector2Array(50, -2.5, 40.0419, -33, -40.0419, -33, -50, -2.5)
+polygon = PackedVector2Array(50.0524, -3, 40.0419, -33, -40.0419, -33, -50.0524, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-50, -100)

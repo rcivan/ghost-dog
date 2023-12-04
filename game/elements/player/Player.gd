@@ -100,3 +100,16 @@ func check_buttons():
 
 	
 
+
+
+func pressed(id):
+	var tmap = get_parent().get_node("TileMap")
+	var doors = tmap.get_used_cells(id)
+
+	for x in doors:
+		tmap.set_cell(id, x,0)
+
+
+
+
+
