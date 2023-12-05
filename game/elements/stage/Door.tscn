@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="2_6bl7j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tn1a7"]
-size = Vector2(300, 300.001)
+size = Vector2(300, 300)
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_32bf1")
@@ -15,12 +15,9 @@ scale = Vector2(0.166667, 1)
 texture = ExtResource("2_6bl7j")
 centered = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-1.28497e-12, -1.50481e-12)
-scale = Vector2(0.617283, 0.722892)
-collision_priority = 2.08165e-12
+[node name="StaticBody2D" type="StaticBody2D" parent="DoorSprite"]
+position = Vector2(-7.70981e-12, -1.50481e-12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(40.5, 207.5)
-scale = Vector2(0.27, 1.38333)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/StaticBody2D"]
+position = Vector2(150, 150)
 shape = SubResource("RectangleShape2D_tn1a7")
