@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var number: int
 
 # Called when the node enters the scene tree for the first time.
 
@@ -17,7 +16,6 @@ func close_door():
 
 
 
+func _on_button_pressed():
+	open_door()
 
-func _on_static_body_2d_pressed(id):
-	if id == number:
-		open_door()

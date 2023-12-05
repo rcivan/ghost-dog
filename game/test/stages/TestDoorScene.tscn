@@ -43,12 +43,11 @@ label_settings = SubResource("LabelSettings_u3jwd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StaticBody2D" parent="." instance=ExtResource("4_w2qfy")]
+[node name="Button" parent="." instance=ExtResource("4_w2qfy")]
 position = Vector2(456, 650)
-number = 1
 
 [node name="Door" parent="." instance=ExtResource("3_05c1w")]
+z_as_relative = false
 position = Vector2(700, 350)
-number = 1
 
-[connection signal="pressed" from="StaticBody2D" to="Door" method="_on_static_body_2d_pressed"]
+[connection signal="pressed" from="Button" to="Door" method="_on_button_pressed"]

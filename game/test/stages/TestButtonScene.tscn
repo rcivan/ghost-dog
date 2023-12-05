@@ -19,69 +19,6 @@ limit_top = 0
 tile_set = ExtResource("2_pmrgn")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 589824, 1, 0, 655360, 1, 0, 720896, 1, 0, 786432, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 851988, 1, 0, 851989, 1, 0, 851990, 1, 0, 851991, 1, 0, 851992, 1, 0, 24, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 851993, 1, 0, 851994, 1, 0, 851995, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 1, 0, 851999, 1, 0, 852000, 1, 0, 852001, 1, 0, 852002, 1, 0, 852003, 1, 0, 852004, 1, 0, 852005, 1, 0, 852006, 1, 0, 852007, 1, 0, 852008, 1, 0, 852009, 1, 0, 852010, 1, 0, 852011, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 852015, 1, 0, 852016, 1, 0, 852017, 1, 0, 852018, 1, 0, 852019, 1, 0, 852020, 1, 0, 852021, 1, 0, 852022, 1, 0, 852023, 1, 0, 852024, 1, 0, 852025, 1, 0, 852026, 1, 0, 852027, 1, 0, 852028, 1, 0, 852029, 1, 0, 852030, 1, 0, 852031, 1, 0, 852032, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 1, 0, 33, 1, 0, 34, 1, 0, 35, 1, 0, 36, 1, 0, 37, 1, 0, 38, 1, 0, 39, 1, 0, 40, 1, 0, 41, 1, 0, 42, 1, 0, 43, 1, 0, 44, 1, 0, 45, 1, 0, 46, 1, 0, 47, 1, 0, 48, 1, 0, 49, 1, 0, 50, 1, 0, 51, 1, 0, 52, 1, 0, 53, 1, 0, 54, 1, 0, 55, 1, 0, 56, 1, 0, 57, 1, 0, 58, 1, 0, 59, 1, 0, 60, 1, 0, 61, 1, 0, 62, 1, 0, 63, 1, 0, 64, 1, 0, 65600, 1, 0, 131136, 1, 0, 196672, 1, 0, 262208, 1, 0, 327744, 1, 0, 393280, 1, 0, 458816, 1, 0, 524352, 1, 0, 589888, 1, 0, 655424, 1, 0, 720960, 1, 0, 786496, 1, 0)
-layer_1/name = ""
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(65553, 393217, 0, 131089, 393217, 0, 196625, 393217, 0, 262161, 393217, 0, 327697, 393217, 0, 393233, 393217, 0, 458769, 393217, 0, 524305, 393217, 0, 589841, 393217, 0, 655377, 393217, 0, 720913, 393217, 0, 786449, 393217, 0)
-layer_2/name = ""
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
-layer_2/y_sort_enabled = false
-layer_2/y_sort_origin = 0
-layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(65560, 393217, 0, 131096, 393217, 0, 196632, 393217, 0, 262168, 393217, 0, 327704, 393217, 0, 393240, 393217, 0, 458776, 393217, 0, 524312, 393217, 0, 589848, 393217, 0, 655384, 393217, 0, 720920, 393217, 0, 786456, 393217, 0)
-layer_3/name = ""
-layer_3/enabled = true
-layer_3/modulate = Color(1, 1, 1, 1)
-layer_3/y_sort_enabled = false
-layer_3/y_sort_origin = 0
-layer_3/z_index = 0
-layer_3/tile_data = PackedInt32Array(65567, 393217, 0, 131103, 393217, 0, 196639, 393217, 0, 262175, 393217, 0, 327711, 393217, 0, 393247, 393217, 0, 458783, 393217, 0, 524319, 393217, 0, 589855, 393217, 0, 655391, 393217, 0, 720927, 393217, 0, 786463, 393217, 0)
-layer_4/name = ""
-layer_4/enabled = true
-layer_4/modulate = Color(1, 1, 1, 1)
-layer_4/y_sort_enabled = false
-layer_4/y_sort_origin = 0
-layer_4/z_index = 0
-layer_4/tile_data = PackedInt32Array(65572, 393217, 0, 131108, 393217, 0, 196644, 393217, 0, 262180, 393217, 0, 327716, 393217, 0, 393252, 393217, 0, 458788, 393217, 0, 524324, 393217, 0, 589860, 393217, 0, 655396, 393217, 0, 720932, 393217, 0, 786468, 393217, 0)
-layer_5/name = ""
-layer_5/enabled = true
-layer_5/modulate = Color(1, 1, 1, 1)
-layer_5/y_sort_enabled = false
-layer_5/y_sort_origin = 0
-layer_5/z_index = 0
-layer_5/tile_data = PackedInt32Array(65582, 393217, 0, 131118, 393217, 0, 196654, 393217, 0, 262190, 393217, 0, 327726, 393217, 0, 393262, 393217, 0, 458798, 393217, 0, 524334, 393217, 0, 589870, 393217, 0, 655406, 393217, 0, 720942, 393217, 0, 786478, 393217, 0)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_ht8ex")]
 position = Vector2(650, 650)
-number = 1
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(1100, 650)
-number = 2
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(1450, 650)
-number = 3
-
-[node name="StaticBody2D4" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(2100, 650)
-number = 5
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(2700, 650)
-
-[node name="StaticBody2D6" parent="." instance=ExtResource("1_ht8ex")]
-position = Vector2(1700, 650)
-number = 4
-
-[connection signal="pressed" from="StaticBody2D" to="Player" method="pressed"]
-[connection signal="pressed" from="StaticBody2D2" to="Player" method="pressed"]
-[connection signal="pressed" from="StaticBody2D3" to="Player" method="pressed"]
-[connection signal="pressed" from="StaticBody2D4" to="Player" method="pressed"]
-[connection signal="pressed" from="StaticBody2D5" to="Player" method="pressed"]
-[connection signal="pressed" from="StaticBody2D5" to="Player" method="_on_static_body_2d_5_pressed"]
-[connection signal="pressed" from="StaticBody2D6" to="Player" method="pressed"]

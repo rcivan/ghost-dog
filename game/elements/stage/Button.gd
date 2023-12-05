@@ -1,14 +1,14 @@
 extends StaticBody2D
 
-@export var number: int 
 
 
-signal pressed(id)
+
+signal pressed()
 
 
 
 func _on_area_2d_body_entered(_body):
-	pressed.emit(number)
+	pressed.emit()
 	$AnimatedSprite2D.play("pressed")
 	
 	
