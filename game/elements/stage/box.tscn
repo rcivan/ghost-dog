@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3p1yjfehxbfa"]
+
+[ext_resource type="Texture2D" uid="uid://j620ohf15ynx" path="res://assets/prelim/tiles/button.png" id="1_cnpn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6t14"]
+size = Vector2(50, 50)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(25, 25)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("1_cnpn2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_b6t14")

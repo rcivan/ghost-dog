@@ -1,14 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://37fgt2111hpf"]
+[gd_scene load_steps=5 format=3 uid="uid://37fgt2111hpf"]
 
 [ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://elements/player/Player.tscn" id="1_le1tx"]
 [ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/tiles/prelim_tiles.tres" id="2_hv3n7"]
-[ext_resource type="Texture2D" uid="uid://ug36nb2i4k2o" path="res://assets/prelim/tiles/door.png" id="3_37qy0"]
+[ext_resource type="PackedScene" uid="uid://d3p1yjfehxbfa" path="res://elements/stage/box.tscn" id="3_qn4pw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xsuqu"]
 font_size = 35
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ism7"]
-size = Vector2(62.5, 59)
 
 [node name="Test" type="Node2D"]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -45,14 +42,5 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Box" type="RigidBody2D" parent="."]
-position = Vector2(1200, 400)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Box"]
-position = Vector2(0.00012207, 3.05176e-05)
-scale = Vector2(0.216667, 0.216667)
-texture = ExtResource("3_37qy0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
-shape = SubResource("RectangleShape2D_7ism7")
+[node name="RigidBody2D" parent="." instance=ExtResource("3_qn4pw")]
+position = Vector2(700, 550)
