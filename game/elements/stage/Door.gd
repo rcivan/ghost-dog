@@ -8,7 +8,7 @@ extends Node2D
 func open_door():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "scale", Vector2(3,1), 0.5)
-	get_node("StaticBody2D").set_collision_layer_value(1,false)
+	get_node("DoorSprite/StaticBody2D").set_collision_layer_value(1,false)
 	
 
 func close_door():
