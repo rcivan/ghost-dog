@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://yrct1d1iw0k4" path="res://assets/final/Door.png" id="2_yfvij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tn1a7"]
-size = Vector2(1068, 300)
+size = Vector2(1066.4, 311.036)
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_32bf1")
 
 [node name="DoorSprite" type="Sprite2D" parent="."]
-position = Vector2(90, 147)
-scale = Vector2(0.341797, 0.341797)
+position = Vector2(75, 150)
+scale = Vector2(0.288462, 0.32967)
 texture = ExtResource("2_yfvij")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="DoorSprite"]
@@ -19,5 +19,5 @@ position = Vector2(-263.314, -430.08)
 scale = Vector2(0.48762, 2.92571)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/StaticBody2D"]
-position = Vector2(533.999, 150)
+position = Vector2(539.998, 147)
 shape = SubResource("RectangleShape2D_tn1a7")
