@@ -12,13 +12,6 @@ font_size = 35
 
 [node name="Player" parent="." instance=ExtResource("1_i3ht5")]
 position = Vector2(250, 480)
-safe_margin = 0.5
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(2.08165e-12, -150)
-offset = Vector2(50, 2.08165e-12)
-limit_left = 0
-limit_top = 0
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = ExtResource("2_33s2a")
