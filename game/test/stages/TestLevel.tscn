@@ -21,11 +21,26 @@ position = Vector2(200, 450)
 [node name="Button" parent="." instance=ExtResource("4_fi0p4")]
 position = Vector2(1550, 950)
 
+[node name="Line2D" type="Line2D" parent="Button"]
+position = Vector2(-1550, -950)
+points = PackedVector2Array(1550, 900, 1400, 900, 1400, 1300, 350, 1300, 350, 700, 250, 700)
+default_color = Color(0, 1, 0, 1)
+joint_mode = 1
+begin_cap_mode = 1
+end_cap_mode = 1
+
 [node name="Door2" parent="." instance=ExtResource("3_wjvya")]
 position = Vector2(1750, 100)
 
 [node name="Button2" parent="." instance=ExtResource("4_fi0p4")]
 position = Vector2(100, 750)
+
+[node name="Line2D" type="Line2D" parent="Button2"]
+points = PackedVector2Array(0, -50, 0, -100, 250, -100, 250, -450, 1650, -450)
+default_color = Color(0, 0, 1, 1)
+joint_mode = 1
+begin_cap_mode = 1
+end_cap_mode = 1
 
 [connection signal="pressed" from="Button" to="Door" method="open_door"]
 [connection signal="pressed" from="Button2" to="Door2" method="open_door"]
