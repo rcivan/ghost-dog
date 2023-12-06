@@ -21,8 +21,10 @@ func _physics_process(delta):
 	
 	
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_sliding:
 		velocity.y = JUMP_VELOCITY 
+	elif Input.is_action_just_pressed("jump") and is_on_floor() and is_sliding:
+		velocity.y += -1 * abs(velocity.x)
 		
 	#Handle Slide Jump
 	if Input.is_action_just_pressed("jump") and is_air_sliding and not cancel_cooldown:
@@ -57,10 +59,9 @@ func _physics_process(delta):
 			velocity.x += velocity.y * -direction
 		elif is_on_floor():
 			is_sliding = true
-	if Input.is_action_pressed("slide") and is_sliding:
-		is_sliding = false
 	
-	if velocity.x <= 400 and velocity.x >= -400 and is_sliding or Input.is_action_just_pressed("jump") :
+	
+	if velocity.x <= 100 and velocity.x >= -100 and is_sliding or Input.is_action_just_pressed("jump") :
 		is_sliding = false
 	
 
