@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED_CUTOFF = 700.0 * .8
-const JUMP_VELOCITY = -1050.0 * .8
+const JUMP_VELOCITY = -1050.0 
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -28,7 +28,7 @@ func _physics_process(delta):
 		
 	#Handle Slide Jump
 	if Input.is_action_just_pressed("jump") and is_air_sliding and not cancel_cooldown:
-		velocity.y += -100 *.8
+		velocity.y += -100
 		velocity.x += 100 * direction *.8
 		is_air_sliding = false
 		cancel_cooldown = true
