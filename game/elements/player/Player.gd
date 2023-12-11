@@ -47,13 +47,13 @@ func _physics_process(delta):
 	elif not direction and not is_air_sliding and not is_sliding:
 		velocity.x = move_toward(velocity.x, 0, 200)
 	elif is_air_sliding or cancel_cooldown:
-		velocity.x = move_toward(velocity.x,0,1)
+		velocity.x = move_toward(velocity.x,0,5)
 	elif is_sliding:
 		velocity.x = move_toward(velocity.x,0,5) 
 	
-	#Handles Slide
+	#Handles Slideq
 	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding:
-		velocity.x = 1200 * direction
+		velocity.x = 1100 * direction
 		if not is_on_floor():
 			is_air_sliding = true
 			velocity.x += velocity.y * -direction
