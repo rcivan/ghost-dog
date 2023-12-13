@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED_CUTOFF = 700.0
-const JUMP_VELOCITY = -1050.0
+const SPEED_CUTOFF = 700.0 * .8
+const JUMP_VELOCITY = -1050.0 
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -28,8 +28,8 @@ func _physics_process(delta):
 		
 	#Handle Slide Jump
 	if Input.is_action_just_pressed("jump") and is_air_sliding and not cancel_cooldown:
-		velocity.y += -400 
-		velocity.x += 100 * direction
+		velocity.y += -100
+		velocity.x += 80 * direction 
 		is_air_sliding = false
 		cancel_cooldown = true
 		
@@ -43,20 +43,20 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF and not is_sliding:
-		velocity.x += 40 * direction
+		velocity.x += 40 * direction *.8
 	elif not direction and not is_air_sliding and not is_sliding:
-		velocity.x = move_toward(velocity.x, 0, 200)
+		velocity.x = move_toward(velocity.x, 0, 160)
 	elif is_air_sliding or cancel_cooldown:
-		velocity.x = move_toward(velocity.x,0,1)
+		velocity.x = move_toward(velocity.x,0,4)
 	elif is_sliding:
-		velocity.x = move_toward(velocity.x,0,5) 
+		velocity.x = move_toward(velocity.x,0,4) 
 	
-	#Handles Slide
+	#Handles Slideq
 	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding:
-		velocity.x = 1200 * direction
+		velocity.x = 1100 * direction *.8
 		if not is_on_floor():
 			is_air_sliding = true
-			velocity.x += velocity.y * -direction
+			velocity.x += velocity.y * -direction *.8
 		elif is_on_floor():
 			is_sliding = true
 	
