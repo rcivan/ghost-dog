@@ -3,6 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 
+@export var delay = 0
 var initial_pos
 
 func _ready():
@@ -20,6 +21,8 @@ func open_door():
 	
 
 func close_door():
+	await get_tree().create_timer(delay).timeout
+	
 	var tween = create_tween()
 	tween.tween_property(
 		self, 
