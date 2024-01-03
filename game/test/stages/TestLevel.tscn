@@ -47,7 +47,7 @@ position = Vector2(2150, 7200)
 
 [node name="Door4" parent="." instance=ExtResource("3_wjvya")]
 position = Vector2(4000, 7500)
-delay = 2
+delay = 1
 
 [node name="Button3" parent="." instance=ExtResource("4_fi0p4")]
 position = Vector2(4050, 7500)
