@@ -44,12 +44,14 @@ func _physics_process(delta):
 	
 	if direction and velocity.x < SPEED_CUTOFF and velocity.x > -SPEED_CUTOFF and not is_sliding:
 		velocity.x += 40 * direction *.8
-	elif not direction and not is_air_sliding and not is_sliding:
+	elif not direction and not is_air_sliding and not is_sliding and not cancel_cooldown:
 		velocity.x = move_toward(velocity.x, 0, 160)
 	elif is_air_sliding or cancel_cooldown:
 		velocity.x = move_toward(velocity.x,0,4)
 	elif is_sliding:
 		velocity.x = move_toward(velocity.x,0,4) 
+	elif cancel_cooldown:
+		velocity.x = move_toward(velocity.x,0,20) 
 	
 	#Handles Slideq
 	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding:
