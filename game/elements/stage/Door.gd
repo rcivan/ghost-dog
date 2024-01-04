@@ -14,7 +14,7 @@ func open_door():
 	tween.tween_property(
 		self, 
 		"position", 
-		initial_pos + Vector2.UP * 300, 
+		initial_pos + Vector2.UP * 300*self.scale[1], 
 		0.5
 	)
 	# get_node("DoorSprite/StaticBody2D").set_collision_layer_value(1,false)
