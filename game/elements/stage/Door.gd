@@ -9,13 +9,12 @@ var initial_pos
 
 func _ready():
 	initial_pos = self.position
-
 func open_door():
 	var tween = create_tween()
 	tween.tween_property(
 		self, 
-		"position", 
-		initial_pos + Vector2.UP * 300*self.scale[1], 
+		"position",
+		initial_pos + (Vector2.UP * 300*self.scale[1]).rotated(self.rotation), 
 		speed
 	)
 	# get_node("DoorSprite/StaticBody2D").set_collision_layer_value(1,false)
