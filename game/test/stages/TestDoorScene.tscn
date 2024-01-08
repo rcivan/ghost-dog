@@ -11,7 +11,8 @@ font_size = 35
 [node name="TestDoorScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_i3ht5")]
-position = Vector2(250, 480)
+position = Vector2(660, 410)
+floor_snap_length = 10.0
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = ExtResource("2_33s2a")
@@ -37,12 +38,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" parent="." instance=ExtResource("4_w2qfy")]
-position = Vector2(456, 650)
+position = Vector2(950, 680)
 
 [node name="Door" parent="." instance=ExtResource("3_05c1w")]
 z_as_relative = false
-position = Vector2(1250, 450)
-rotation = 1.5708
+position = Vector2(660, 650)
+scale = Vector2(4, 1)
+delay = 100.0
+speed = 50.0
+distance = 20
 
 [connection signal="depressed" from="Button" to="Door" method="close_door"]
 [connection signal="pressed" from="Button" to="Door" method="open_door"]
