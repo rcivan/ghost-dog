@@ -5,7 +5,7 @@ extends Node2D
 
 @export var delay = 0.0
 @export var speed = 0.5
-@export var distance = 6
+@export var distance = 60
 var initial_pos
 
 func _ready():
@@ -15,7 +15,7 @@ func open_door():
 	tween.tween_property(
 		self, 
 		"position",
-		initial_pos + (Vector2.UP * distance*50*self.scale[1]).rotated(self.rotation), 
+		initial_pos + (Vector2.UP * distance*50).rotated(self.rotation), 
 		speed
 	)
 	# get_node("DoorSprite/StaticBody2D").set_collision_layer_value(1,false)
