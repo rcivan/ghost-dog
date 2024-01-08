@@ -34,3 +34,14 @@ horizontal_alignment = 1
 [node name="Scenes" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+
+[node name="LevelsButton" type="Button" parent="VBoxContainer/Scenes"]
+layout_mode = 2
+text = "Levels"
+
+[node name="TestButton" type="Button" parent="VBoxContainer/Scenes"]
+layout_mode = 2
+text = "Testing Stages"
+
+[connection signal="pressed" from="VBoxContainer/Scenes/LevelsButton" to="." method="level_pressed"]
+[connection signal="pressed" from="VBoxContainer/Scenes/TestButton" to="." method="test_pressed"]
