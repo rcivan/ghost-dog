@@ -10,6 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_air_sliding = false
 var cancel_cooldown = false
 var is_sliding =  false
+@export var slide_unlocked = false 
 
 func _physics_process(delta):
 	
@@ -54,7 +55,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x,0,20) 
 	
 	#Handles Slideq
-	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding:
+	if Input.is_action_just_pressed("slide") and not is_sliding and not is_air_sliding and slide_unlocked:
 		velocity.x = 1100 * direction *.8
 		if not is_on_floor():
 			is_air_sliding = true
