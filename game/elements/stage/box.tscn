@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://j620ohf15ynx" path="res://assets/prelim/tiles/button.png" id="1_cnpn2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6t14"]
-size = Vector2(50, 50)
+size = Vector2(80, 80)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(25, 25)
-scale = Vector2(0.166667, 0.166667)
+position = Vector2(40, 40)
+scale = Vector2(0.266667, 0.266667)
 texture = ExtResource("1_cnpn2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 25)
+position = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_b6t14")
