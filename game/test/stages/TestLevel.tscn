@@ -50,7 +50,7 @@ position = Vector2(2100, 7150)
 position = Vector2(3950, 7500)
 
 [node name="Button3" parent="Door4" instance=ExtResource("4_fi0p4")]
-position = Vector2(50, 0)
+position = Vector2(30, 0)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("5_herpl")]
 position = Vector2(4690, 6930)
