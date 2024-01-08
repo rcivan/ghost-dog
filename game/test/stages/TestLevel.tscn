@@ -61,9 +61,8 @@ scale = Vector2(1, 0.5)
 distance = 9
 
 [node name="Button4" parent="Door5" instance=ExtResource("4_fi0p4")]
-visible = false
-position = Vector2(50, 20)
-scale = Vector2(1, 0.666667)
+position = Vector2(50, 60)
+scale = Vector2(1, 2)
 
 [connection signal="pressed" from="Button" to="Door" method="open_door"]
 [connection signal="pressed" from="Button2" to="Door2" method="open_door"]
