@@ -5,7 +5,7 @@ extends Node2D
 
 @export var delay = 0.0
 @export var speed = 0.5
-@export var distance = 60
+@export var distance = 6
 var initial_pos
 
 func _ready():
