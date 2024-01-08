@@ -11,7 +11,7 @@ font_size = 35
 [node name="TestDoorScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_i3ht5")]
-position = Vector2(660, 410)
+position = Vector2(800, 420)
 floor_snap_length = 10.0
 
 [node name="Map" type="TileMap" parent="."]
@@ -42,11 +42,11 @@ position = Vector2(950, 680)
 
 [node name="Door" parent="." instance=ExtResource("3_05c1w")]
 z_as_relative = false
-position = Vector2(660, 650)
-scale = Vector2(4, 1)
-delay = 100.0
-speed = 50.0
-distance = 20
+position = Vector2(760, 650)
+scale = Vector2(1, 2)
+delay = 0.2
+speed = 0.1
+distance = 12
 
 [connection signal="depressed" from="Button" to="Door" method="close_door"]
 [connection signal="pressed" from="Button" to="Door" method="open_door"]
