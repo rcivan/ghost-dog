@@ -11,7 +11,6 @@ var initial_pos
 func _ready():
 	initial_pos = self.position
 	
-	print(.5)
 func open_door():
 	var tween = create_tween()
 	tween.tween_property(
@@ -25,7 +24,6 @@ func open_door():
 
 func close_door():
 	await get_tree().create_timer(delay).timeout
-	
 	var tween = create_tween()
 	tween.tween_property(
 		self, 
