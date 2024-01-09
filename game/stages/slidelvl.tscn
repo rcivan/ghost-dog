@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct8x5ykh703b7"]
+
+[ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/tiles/prelim_tiles.tres" id="1_7axau"]
+[ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://elements/player/Player.tscn" id="2_ljtyi"]
+[ext_resource type="PackedScene" uid="uid://dkwrathnvna2f" path="res://elements/stage/Button.tscn" id="3_fn524"]
+[ext_resource type="PackedScene" uid="uid://b3npe5j63l27w" path="res://elements/stage/Door.tscn" id="4_j6dj3"]
+
+[node name="Slidelvl" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_7axau")
+format = 2
+layer_0/tile_data = PackedInt32Array(327687, 1, 0, 393211, 1, 1, -327685, 1, 0, -262149, 1, 1, -196613, 1, 0, -131077, 1, 1, -65541, 1, 0, -5, 1, 1, 65531, 1, 0, 131067, 1, 1, 196603, 1, 0, 262139, 1, 1, 327675, 1, 0, -524293, 1, 0, -458757, 1, 0, -393221, 1, 1, 327688, 1, 0, 327689, 65537, 0, 327690, 1, 0, 327691, 65537, 0, 327692, 1, 0, 327693, 65537, 0, 327694, 1, 0, 327695, 65537, 0, 327696, 1, 0, 327697, 65537, 0, 327698, 1, 0, 327699, 65537, 0, 327700, 1, 0, 327701, 65537, 0, 327702, 1, 0, 327703, 65537, 0, 327704, 1, 0, 327705, 65537, 0, 327706, 1, 0, 327707, 65537, 0, 327708, 1, 0, 327709, 65537, 0, 327710, 1, 0, 327711, 65537, 0, 327712, 1, 0, 327713, 65537, 0, -720871, 1, 0, -655335, 1, 1, -589799, 1, 0, -524263, 1, 1, -458727, 1, 0, -393191, 1, 1, -327655, 1, 0, -262119, 1, 1, -196583, 1, 0, -131047, 1, 1, -720901, 65537, 0, -720900, 1, 0, -720899, 65537, 0, -720898, 1, 0, -720897, 65537, 0, -786432, 1, 0, -786431, 65537, 0, -786430, 1, 0, -786429, 65537, 0, -786428, 1, 0, -786427, 65537, 0, -786426, 1, 0, -786425, 65537, 0, -786424, 1, 0, -786423, 65537, 0, -786422, 1, 0, -786421, 65537, 0, -786420, 1, 0, -786419, 65537, 0, -786418, 1, 0, -786417, 65537, 0, -786416, 1, 0, -786415, 65537, 0, -786414, 1, 0, -786413, 65537, 0, -786412, 1, 0, -786411, 65537, 0, -786410, 1, 0, -786409, 65537, 0, -786408, 1, 0, -786407, 65537, 0, -655365, 1, 0, -589829, 1, 1, 393212, 65537, 0, 393213, 1, 0, 393214, 65537, 0, 393215, 1, 0, 327680, 65537, 0, 327681, 1, 0, 327682, 65537, 0, 327683, 1, 0, 327684, 65537, 0, 327685, 1, 0, 327686, 65537, 0, 327714, 1, 0, 327715, 65537, 0, 327716, 1, 0, 327717, 65537, 0, 327718, 1, 0, 327719, 65537, 0, 327720, 1, 0, 327721, 65537, 0, 327722, 1, 0, 327723, 65537, 0, 327724, 1, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_ljtyi")]
+slide_unlocked = true
+
+[node name="Button" parent="." instance=ExtResource("3_fn524")]
+position = Vector2(150, 250)
+
+[node name="blocker" parent="." instance=ExtResource("4_j6dj3")]
+position = Vector2(1250, -50)
+delay = 0.5
+distance = 8
+
+[connection signal="depressed" from="Button" to="blocker" method="close_door"]
+[connection signal="pressed" from="Button" to="blocker" method="open_door"]
