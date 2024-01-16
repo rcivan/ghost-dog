@@ -9,7 +9,7 @@ func list_from_directory(dir_name):
 
 	var dir = DirAccess.open(dir_name)
 
-	if not dir:
+	if not dir:z
 		return
 	
 	dir.list_dir_begin()

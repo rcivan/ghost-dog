@@ -9,6 +9,7 @@ signal depressed()
 
 func _on_area_2d_body_entered(_body):
 	pressed.emit()
+	$AudioStreamPlayer.play(0)
 	$AnimatedSprite2D.play("pressed")
 	
 	

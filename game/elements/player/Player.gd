@@ -24,6 +24,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_sliding:
 		velocity.y = JUMP_VELOCITY 
+		# $jump_sound.play()
 	elif Input.is_action_just_pressed("jump") and is_on_floor() and is_sliding:
 		velocity.y += -1 * abs(velocity.x)
 		
@@ -71,6 +72,10 @@ func _physics_process(delta):
 	if velocity.x != 0:
 		$AnimatedSprite2D.flip_h = velocity.x > 0
 		$AnimatedSprite2D.play('walk')
+		
+		if not $footstep_sound.playing and is_on_floor():
+			$footstep_sound.play()
+		
 	else:
 		$AnimatedSprite2D.play('idle')
 		

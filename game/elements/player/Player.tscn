@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://biejvu5ndljmx"]
+[gd_scene load_steps=24 format=3 uid="uid://biejvu5ndljmx"]
 
 [ext_resource type="Script" path="res://elements/player/Player.gd" id="1_mrrjk"]
 [ext_resource type="Texture2D" uid="uid://di1ux12mrwcsk" path="res://assets/final/walking/w01.png" id="1_pnboo"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://dpkh4sb7310ha" path="res://assets/final/walking/w16.png" id="16_7ju5i"]
 [ext_resource type="Texture2D" uid="uid://brj3g2mfgy03d" path="res://assets/final/walking/w17.png" id="17_1shk0"]
 [ext_resource type="Texture2D" uid="uid://dxfovc1uv20fp" path="res://assets/final/walking/w18.png" id="18_0dam3"]
+[ext_resource type="AudioStream" uid="uid://dcgobistleblj" path="res://assets/sfx/footsteps.mp3" id="20_d3gsd"]
+[ext_resource type="AudioStream" uid="uid://ca5wx2pfen8du" path="res://assets/sfx/jump.mp3" id="21_st8xu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ychm1"]
 animations = [{
@@ -117,3 +119,12 @@ shape = SubResource("RectangleShape2D_h6oyc")
 position = Vector2(50, -150)
 offset = Vector2(2.08165e-12, 2.08165e-12)
 enabled = false
+
+[node name="footstep_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_d3gsd")
+volume_db = -36.523
+pitch_scale = 1.48
+
+[node name="jump_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_st8xu")
+volume_db = -32.667

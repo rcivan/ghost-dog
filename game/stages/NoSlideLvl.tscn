@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2c5s2l275huo"]
+[gd_scene load_steps=7 format=3 uid="uid://d2c5s2l275huo"]
 
 [ext_resource type="TileSet" uid="uid://cokllca8dc6h3" path="res://assets/prelim/tiles/prelim_tiles.tres" id="1_kfdyo"]
 [ext_resource type="PackedScene" uid="uid://biejvu5ndljmx" path="res://elements/player/Player.tscn" id="2_7s1iv"]
 [ext_resource type="PackedScene" uid="uid://b3npe5j63l27w" path="res://elements/stage/Door.tscn" id="3_qa5mq"]
 [ext_resource type="PackedScene" uid="uid://dkwrathnvna2f" path="res://elements/stage/Button.tscn" id="4_244wm"]
 [ext_resource type="PackedScene" uid="uid://d3p1yjfehxbfa" path="res://elements/stage/box.tscn" id="5_8fq2a"]
+[ext_resource type="AudioStream" uid="uid://buynankgldkn8" path="res://assets/sfx/bgm.mp3" id="6_j7j71"]
 
 [node name="testLevel" type="Node2D"]
 
@@ -76,6 +77,11 @@ distance = 12
 
 [node name="Button3" parent="." instance=ExtResource("4_244wm")]
 position = Vector2(1900, 6500)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_j7j71")
+volume_db = -11.143
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Door" method="open_door"]
 [connection signal="pressed" from="Button2" to="Door2" method="open_door"]
