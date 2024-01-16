@@ -116,3 +116,4 @@ shape = SubResource("RectangleShape2D_h6oyc")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(50, -150)
 offset = Vector2(2.08165e-12, 2.08165e-12)
+enabled = false
