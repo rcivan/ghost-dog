@@ -20,6 +20,7 @@ position = Vector2(-1424, 493)
 
 [node name="Door1" parent="." instance=ExtResource("4_so72u")]
 position = Vector2(1544, 249)
+scale = Vector2(3, 6)
 
 [node name="Button2" parent="." instance=ExtResource("3_cogby")]
 position = Vector2(1947, 547)
