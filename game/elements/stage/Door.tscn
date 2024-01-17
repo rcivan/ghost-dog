@@ -10,8 +10,8 @@ size = Vector2(1066.4, 311.036)
 script = ExtResource("1_32bf1")
 
 [node name="DoorSprite" type="Sprite2D" parent="."]
-position = Vector2(75, 150)
-scale = Vector2(0.288462, 0.32967)
+position = Vector2(25, 25)
+scale = Vector2(0.0961538, 0.0549451)
 texture = ExtResource("2_yfvij")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="DoorSprite"]
@@ -20,4 +20,5 @@ scale = Vector2(0.48762, 2.92571)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/StaticBody2D"]
 position = Vector2(539.998, 147)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tn1a7")
